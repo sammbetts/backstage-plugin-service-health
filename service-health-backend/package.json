@@ -1,10 +1,10 @@
 {
-  "name": "@sammbetts/plugin-service-health-backend",
+  "name": "@sammbetts/backstage-plugin-service-health-backend",
   "version": "0.1.0",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "license": "Apache-2.0",
-  "private": true,
+  "private": false,
   "publishConfig": {
     "access": "public",
     "main": "dist/index.cjs.js",
@@ -25,13 +25,18 @@
   "dependencies": {
     "@backstage/backend-common": "^0.19.5",
     "@backstage/config": "^1.1.0",
+    "@backstage/plugin-app-backend": "^0.3.53",
     "@types/express": "*",
+    "@types/react": "18",
+    "@types/react-dom": "18",
     "axios": "^1.5.1",
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",
     "knex": "^2.5.1",
     "luxon": "^3.4.3",
     "node-fetch": "^2.6.7",
+    "react": "18",
+    "react-dom": "18",
     "winston": "^3.2.1",
     "yn": "^4.0.0"
   },
