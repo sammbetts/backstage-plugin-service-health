@@ -1,0 +1,1 @@
+export { IncidentIcon } from './IncidentIcon';

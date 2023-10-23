@@ -1,0 +1,21 @@
+app:
+  title: Backstage Service Health Plugin
+  baseUrl: http://localhost:3000
+
+backend:
+  baseUrl: http://localhost:7007
+  listen: {}
+  port: 7007
+  database:
+    client: better-sqlite3
+    connection: ':memory:'
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+    credentials: true
+  reading:
+    allow:
+      - host: localhost
+
+serviceHealth:
+  slackWebhookUrl: ${SLACK_WEBHOOK_URL}

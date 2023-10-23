@@ -1,0 +1,5 @@
+site_name: Service Health Dashboard
+docs_dir: .
+
+nav:
+  - Home: 'README.md'
