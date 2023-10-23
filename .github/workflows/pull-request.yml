@@ -1,0 +1,51 @@
+name: Pull Request
+
+on:
+  pull_request:
+    paths-ignore:
+      - README.md
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          cache: yarn
+          node-version-file: .tool-versions
+      - run: yarn install --immutable
+      - run: yarn lint:all  
+
+prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Configure / Setup with Yarn
+        uses: actions/setup-node@v3
+        with:
+          cache: yarn
+          node-version-file: .tool-versions
+      - run: yarn install --immutable
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v37
+        with:
+          files: |
+            **/*.md
+            **/*.yml
+            **/*.yaml
+            **/*.ts
+            **/*.js
+            **/*.html
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.3
+        with:
+          prettier_options: >-
+            --check ${{ steps.changed-files.outputs.all_changed_files }}
+          dry: true
+          only_changed: false
