@@ -19,7 +19,6 @@ import GCP from '../assets/gcp.png';
 import GoogleWorkspace from '../assets/googleworkspace.png';
 import HashiCorp from '../assets/hashicorp.png';
 import Jira from '../assets/jira.png';
-import Robin from '../assets/robin.png';
 import Slack from '../assets/slack.png';
 import StatusPage from '../assets/statuspage.png';
 import OpsGenie from '../assets/opsgenie.png';
@@ -68,7 +67,6 @@ const icons = {
   'Google Cloud Platform': GCP,
   'Google Workspace': GoogleWorkspace,
   'HashiCorp Services': HashiCorp,
-  Robin: Robin,
   'Jira Software': Jira,
   Opsgenie: OpsGenie,
   Slack: Slack,

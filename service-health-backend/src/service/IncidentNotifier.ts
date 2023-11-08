@@ -13,9 +13,7 @@ export class IncidentNotifier {
 
   constructor(logger: Logger, config: Config) {
     this.logger = logger;
-    this.slackWebhookUrl = config.getString(
-      'serviceHealth.slackWebhookUrl',
-    );
+    this.slackWebhookUrl = config.getString('serviceHealth.slackWebhookUrl');
   }
 
   async connect(database: PluginDatabaseManager) {
@@ -36,7 +34,7 @@ export class IncidentNotifier {
         for (const incident of service.incidents) {
           if (await this.isIncidentNew(incident.id)) {
             incident.serviceName = service.serviceName;
-            incident.componentName = service.incidentComponents;
+            incident.componentName = service.incidentComponents.join(', ');
             incident.updated = convertToUKDateTimeFormat(
               incident.modified || incident.updated_at || incident.date_updated,
             );
@@ -51,7 +49,9 @@ export class IncidentNotifier {
         services: newIncidents,
       };
     } catch (error) {
-      this.logger.error(`Error while fetching health data: ${(error as Error).message}`);
+      this.logger.error(
+        `Error while fetching health data: ${(error as Error).message}`,
+      );
       return { services: [] };
     }
   }

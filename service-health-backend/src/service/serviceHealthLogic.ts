@@ -124,9 +124,6 @@ export async function refreshAllServices(_: DatabaseHandler): Promise<any> {
   const opsGenieIncidents = fetchDataFromAPI(
     'https://opsgenie.status.atlassian.com/api/v2/summary.json',
   );
-  const robinIncidents = fetchDataFromAPI(
-    'https://status.robinpowered.com/api/v2/summary.json',
-  );
   const slackIncidents = fetchDataFromSlackAPI(
     'https://status.slack.com/api/v2.0.0/current',
   );
@@ -152,7 +149,6 @@ export async function refreshAllServices(_: DatabaseHandler): Promise<any> {
     hashiCorpIncidents,
     jiraIncidents,
     opsGenieIncidents,
-    robinIncidents,
     slackIncidents,
     statusPageIncidents,
     vercelPageIncidents,
