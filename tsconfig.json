@@ -1,11 +1,6 @@
 {
   "extends": "@backstage/cli/config/tsconfig.json",
-  "include": [
-    "service-health-backend/src",
-    "service-health-dashboard/src",
-    "service-health-dashboard/dev",
-    "global.d.ts"
-  ],
+  "include": ["plugins/*/src", "plugins/*/dev", "plugins/*/migrations"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "outDir": "dist-types",
