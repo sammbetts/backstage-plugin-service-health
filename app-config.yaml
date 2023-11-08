@@ -18,4 +18,4 @@ backend:
       - host: localhost
 
 serviceHealth:
-  slackWebhookUrl: ${SLACK_WEBHOOK_URL}
+  slackWebhookUrl: 

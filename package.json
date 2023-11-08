@@ -10,8 +10,8 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"yarn start\" \"yarn start-backend\"",
-    "start": "yarn workspace backstage-plugin-service-health-dashboard start",
-    "start-backend": "yarn workspace backstage-plugin-service-health-backend start",
+    "start": "yarn workspace @sammbetts/backstage-plugin-service-health-dashboard start",
+    "start-backend": "yarn workspace @sammbetts/backstage-plugin-service-health-backend start",
     "build": "backstage-cli package build",
     "build:all": "backstage-cli repo build --all",
     "tsc": "tsc",

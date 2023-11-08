@@ -4,7 +4,7 @@ import {
   serviceHealthPlugin,
   ServiceHealthDashboardPage,
   ServiceHealthOverviewCard,
-} from '../src/index';
+} from '../src';
 
 createDevApp()
   .registerPlugin(serviceHealthPlugin)
