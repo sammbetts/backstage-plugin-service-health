@@ -1,9 +1,9 @@
 {
   "extends": "@backstage/cli/config/tsconfig.json",
   "include": [
-    "service-health-backend/src",
-    "service-health-dashboard/src",
-    "service-health-dashboard/dev",
+    "plugins/service-health-backend/src",
+    "plugins/service-health-dashboard/src",
+    "plugins/service-health-dashboard/dev",
     "service-health-dashboard-backend/dev",
     "global.d.ts"
   ],
