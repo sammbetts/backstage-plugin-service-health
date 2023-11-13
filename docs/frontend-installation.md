@@ -3,7 +3,7 @@
 Add the package to your frontend application:
 
 ```bash
-npm install @sammbetts/backstage-plugin-service-health
+npm install @sammbetts/backstage-plugin-service-health-dashboard
 ```
 
 Modify your app routes in `packages/app/src/App.tsx`:
