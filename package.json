@@ -6,7 +6,6 @@
     "node": "16 || 18"
   },
   "license": "Apache-2.0",
-  "private": true,
   "scripts": {
     "dev": "concurrently \"yarn start\" \"yarn start-backend\"",
     "start": "yarn workspace backstage-plugin-service-health-dashboard start",
