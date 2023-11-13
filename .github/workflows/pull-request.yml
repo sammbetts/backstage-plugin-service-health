@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           cache: yarn
-          node-version-file: .tool-versions
+          node-version: 18
       - run: yarn install --immutable
       - name: Get changed files
         id: changed-files
