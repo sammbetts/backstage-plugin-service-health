@@ -16,7 +16,7 @@ createDevApp()
   .addPage({
     element: (
       <div style={{ width: '550px', margin: '10px' }}>
-        <ServiceHealthOverviewCard title={'Status Overview'} />
+        <ServiceHealthOverviewCard title="Status Overview" />
       </div>
     ),
     title: 'Card',
