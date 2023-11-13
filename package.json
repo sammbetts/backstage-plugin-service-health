@@ -18,8 +18,7 @@
     "test": "backstage-cli repo test",
     "clean": "backstage-cli repo clean",
     "prepack": "backstage-cli repo prepack",
-    "postpack": "backstage-cli repo postpack",
-    "bump": "npx release-please github-release"
+    "postpack": "backstage-cli repo postpack"
   },
   "workspaces": {
     "packages": [
