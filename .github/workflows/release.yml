@@ -76,7 +76,7 @@ jobs:
       - run: yarn
       - run: yarn tsc
       - run: yarn build
-      - run: yarn npm publish
+      - run: yarn publish
 
   backend-publish:
     name: Publish plugin backend
@@ -103,4 +103,4 @@ jobs:
       - run: yarn
       - run: yarn tsc
       - run: yarn build
-      - run: yarn npm publish
+      - run: yarn publish
