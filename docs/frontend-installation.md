@@ -36,7 +36,7 @@ Add the **Service Health** icon to the Sidebar in `packages/app/src/components/R
 To use the Card component, add to your home/landing page:
 
 ```ts
-import { ServiceHealthOverviewCard } from '@sammbetts/backstage-plugin-service-health';
+import { ServiceHealthOverviewCard } from '@sammbetts/backstage-plugin-service-health-dashboard';
 
 ...
 <Grid item>
