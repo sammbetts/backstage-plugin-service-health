@@ -5,7 +5,7 @@ import {
 import { Knex } from 'knex';
 
 const migrationsDir = resolvePackagePath(
-  '@sammbetts/backstage-plugin-service-health-backend',
+  'backstage-plugin-service-health-backend',
   'migrations',
 );
 
