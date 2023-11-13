@@ -1,6 +1,7 @@
 {
   "name": "root",
   "version": "0.1.0",
+  "repository": "https://github.com/sammbetts/backstage-plugin-service-health.git",
   "engines": {
     "node": "16 || 18"
   },
@@ -8,8 +9,8 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"yarn start\" \"yarn start-backend\"",
-    "start": "yarn workspace @sammbetts/backstage-plugin-service-health-dashboard start",
-    "start-backend": "yarn workspace @sammbetts/backstage-plugin-service-health-backend start",
+    "start": "yarn workspace backstage-plugin-service-health-dashboard start",
+    "start-backend": "yarn workspace backstage-plugin-service-health-backend start",
     "build": "backstage-cli package build",
     "build:all": "backstage-cli repo build --all",
     "tsc": "tsc",
@@ -21,8 +22,8 @@
   },
   "workspaces": {
     "packages": [
-      "plugins/service-health-backend/*",
-      "plugins/service-health-dashboard/*"
+      "packages/*",
+      "plugins/*"
     ]
   },
   "devDependencies": {
