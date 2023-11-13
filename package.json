@@ -19,7 +19,7 @@
     "clean": "backstage-cli repo clean",
     "prepack": "backstage-cli repo prepack",
     "postpack": "backstage-cli repo postpack",
-    "bump": "yarn run standard-version --no-verify --releaseCommitMessageFormat 'v{{currentTag}}'"
+    "bump": "npx release-please github-release"
   },
   "workspaces": {
     "packages": [
