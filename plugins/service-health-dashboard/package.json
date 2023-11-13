@@ -34,10 +34,10 @@
     "@material-ui/lab": "^4.0.0-alpha.60",
     "axios": "^1.4.0",
     "luxon": "^3.4.0",
-    "react-use": "^17.4.0"
+    "react-use": "^17.2.4"
   },
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0"
+    "react": "^16.13.1 || ^17.0.0"
   },
   "devDependencies": {
     "@backstage/cli": "^0.22.13",

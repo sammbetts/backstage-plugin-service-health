@@ -1,7 +1,15 @@
 {
   "extends": "@backstage/cli/config/tsconfig.json",
-  "include": ["plugins/*/src", "plugins/*/dev", "plugins/*/migrations"],
+  "include": [
+    "plugins/*/src",
+    "plugins/*/dev",
+    "plugins/*/migrations",
+    "global.d.ts"
+  ],
   "exclude": ["node_modules"],
+  "paths": {
+    "react": ["./node_modules/@types/react"]
+  },
   "compilerOptions": {
     "outDir": "dist-types",
     "rootDir": "."
