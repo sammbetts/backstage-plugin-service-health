@@ -48,7 +48,7 @@ export const ServiceHealth = (props: TableProps) => {
           incidentServiceName={
             incident.service_name || // google
             incident.services || // slack
-            incident.components[0].name.join(', ') // all others
+            incident.components[0].name // all others
           }
           incidentStatus={
             <>

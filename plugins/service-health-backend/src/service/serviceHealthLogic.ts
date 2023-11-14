@@ -39,9 +39,9 @@ const fetchDataFromAPI = async (apiUrl: string): Promise<ServiceResponse> => {
     updated: page.updated_at,
     link: page.url,
     incidents: incidents,
-    incidentComponents: incidents.map(
-      (incident: any) => incident.components[0].name,
-    ),
+    incidentComponents: incidents
+      .map((incident: any) => incident.components[0].name)
+      .join(', '),
   };
 };
 
