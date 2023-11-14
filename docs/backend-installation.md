@@ -3,7 +3,7 @@
 Add the package to your backendend application:
 
 ```bash
-npm install @sammbetts/backstage-plugin-service-health-backend
+yarn add @sammbetts/backstage-plugin-service-health-backend
 ```
 
 Create a file called 'service-health.ts' in `packages/backend/src/plugins`

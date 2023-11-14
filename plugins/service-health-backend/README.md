@@ -20,7 +20,7 @@ After installing the [service-health-dashboard](https://www.npmjs.com/package/ba
 add the backend package to your backend application:
 
 ```bash
-npm install @sammbetts/backstage-plugin-service-health-backend
+yarn add @sammbetts/backstage-plugin-service-health-backend
 ```
 
 Create a file called 'service-health.ts' in `packages/backend/src/plugins`

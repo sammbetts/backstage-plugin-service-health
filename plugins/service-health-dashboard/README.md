@@ -14,31 +14,12 @@ This plugin displays the status and active incidents of third party services dir
 - A Card component to display an overview of the status's on the homepage.
 - Ability to enable slack notifications for alerting of new incidents.
 
-<br/>
-
-Service Health page default display:
-
-![img](../../docs/assets/2.png)
-
-Dark mode:
-![img](../../docs/assets/5.png)
-
-When an ongoing incident is happening, the drop down tables become available to open for more information:
-
-![img](../../docs/assets/1.png)
-
-Home page card:
-![img](../../docs/assets/4.png)
-
-Dark mode:
-![img](../../docs/assets/3.png)
-
-# Frontend Installation
+## Frontend Installation
 
 Add the package to your frontend application:
 
 ```bash
-npm install @sammbetts/backstage-plugin-service-health-dashboard
+yarn add @sammbetts/backstage-plugin-service-health-dashboard
 ```
 
 Modify your app routes in `packages/app/src/App.tsx`:
