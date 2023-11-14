@@ -27,14 +27,13 @@ When an ongoing incident is happening, the drop down tables become available to 
 
 ![img](docs/assets/1.png)
 
-Widget:
+Home page card:
 ![img](docs/assets/4.png)
 
-Widget dark mode:
+Dark mode:
 ![img](docs/assets/3.png)
+
 ## Getting started
 
 - [Frontend installation instructions](docs/frontend-installation.md)
 - [Backend installation instructions](docs/backend-installation.md)
-
-- [Contributing guide](docs/contributing.md)
