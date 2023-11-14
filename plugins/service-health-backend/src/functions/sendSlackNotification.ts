@@ -1,14 +1,15 @@
 export const sendSlackNotification = async (
   serviceName: string,
-  incidentServiceName: string,
   incidentTime: string,
+  incidentServiceName: string,
+  incidentUrl: string,
   slackWebhookUrl: string,
 ) => {
   const payload = {
     text: `:warning: *Service Health - Third party incident alert* :warning:
         \nAn active incident has been reported by *${serviceName}* at *${incidentTime}* affecting *${incidentServiceName}*.
         \n
-        \n_Powered by Backstage Service Health Plugin_`,
+        \n_<${incidentUrl}|Click to see more...>_`,
   };
 
   fetch(slackWebhookUrl, {

@@ -31,13 +31,18 @@ export class IncidentNotifier {
       const newIncidents: any[] = [];
 
       for (const service of healthData) {
+        console.log(service);
         for (const incident of service.incidents) {
           if (await this.isIncidentNew(incident.id)) {
             incident.serviceName = service.serviceName;
-            incident.componentName = service.incidentComponents.join(', ');
             incident.updated = convertToUKDateTimeFormat(
               incident.modified || incident.updated_at || incident.date_updated,
             );
+            incident.componentName = service.incidentComponents.join(', ');
+            incident.link =
+              `${service.link}/incidents/${incident.uri}` ||
+              incident.url ||
+              incident.shortlink;
             newIncidents.push(incident);
           }
         }
@@ -78,8 +83,9 @@ export class IncidentNotifier {
         }
         await sendSlackNotification(
           incident.serviceName,
-          incidentName,
           incident.updated,
+          incidentName,
+          incident.link,
           this.slackWebhookUrl,
         );
         await this.db?.createIncidentRecord(incident.id);

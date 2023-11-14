@@ -13,7 +13,6 @@ interface TableProps {
   link: string;
   icon: string;
   incidents: [];
-  uri?: string;
 }
 
 interface CardProps {
@@ -23,7 +22,7 @@ interface CardProps {
 }
 
 export const ServiceHealth = (props: TableProps) => {
-  const { serviceName, status, updated, link, icon, incidents, uri } = props;
+  const { serviceName, status, updated, link, icon, incidents } = props;
   const [open, setOpen] = React.useState(false);
 
   const handleToggle = () => {
@@ -65,7 +64,7 @@ export const ServiceHealth = (props: TableProps) => {
           )}
           incidentLink={
             incident.uri
-              ? `${uri}/${incident.uri}`
+              ? `${link}/incidents/${incident.uri}`
               : incident.url || incident.shortlink
           }
           isOpen={open}

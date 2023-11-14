@@ -27,7 +27,6 @@ interface ServiceResponse {
   link: string;
   incidents: Incident[];
   incidentComponents?: string[];
-  uri?: string;
 }
 
 const fetchDataFromAPI = async (apiUrl: string): Promise<ServiceResponse> => {
@@ -50,7 +49,6 @@ const fetchDataFromGoogleAPI = async (
   incidentSource: string,
   apiUrl: string,
   link: string,
-  uri: string,
 ): Promise<ServiceResponse> => {
   const response = await axios.get(apiUrl);
   const incidents = response.data;
@@ -65,7 +63,6 @@ const fetchDataFromGoogleAPI = async (
     updated: new Date().toISOString(),
     link: link,
     incidents: ongoingIncidents,
-    uri: uri,
   };
 };
 
@@ -106,14 +103,12 @@ export async function refreshAllServices(_: DatabaseHandler): Promise<any> {
   const googleCloudIncidents = fetchDataFromGoogleAPI(
     'Google Cloud Platform',
     'https://status.cloud.google.com/incidents.json',
-    'https://status.cloud.google.com/',
-    'https://status.cloud.google.com/',
+    'https://status.cloud.google.com',
   );
   const googleWorkspaceIncidents = fetchDataFromGoogleAPI(
     'Google Workspace',
     'https://www.google.com/appsstatus/dashboard/incidents.json',
-    'https://www.google.com/appsstatus/dashboard/',
-    'https://www.google.com/appsstatus/dashboard/incidents',
+    'https://www.google.com/appsstatus/dashboard',
   );
   const hashiCorpIncidents = fetchDataFromAPI(
     'https://status.hashicorp.com/api/v2/summary.json',
