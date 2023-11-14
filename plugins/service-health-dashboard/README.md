@@ -60,4 +60,4 @@ import { ServiceHealthOverviewCard } from '@sammbetts/backstage-plugin-service-h
 </Grid>
 ...
 ```
-You will also need to install the [service-health-backend](https://www.npmjs.com/package/backstage-plugin-service-health-backend)
+You will also need to install the [service-health-backend](https://www.npmjs.com/package/@sammbetts/backstage-plugin-service-health-backend)
