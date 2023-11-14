@@ -97,7 +97,6 @@ export const ServiceHealthDashboardPage = () => {
                 link={service.link}
                 icon={icons[service.serviceName as keyof typeof icons]}
                 incidents={service.incidents}
-                uri={service.uri}
               />
             ))}
         </Table>
