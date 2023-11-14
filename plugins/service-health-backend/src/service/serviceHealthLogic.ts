@@ -40,7 +40,7 @@ const fetchDataFromAPI = async (apiUrl: string): Promise<ServiceResponse> => {
     link: page.url,
     incidents: incidents,
     incidentComponents: incidents.map(
-      (incident: any) => incident.components[0].name.join(', '),
+      (incident: any) => incident.components[0].name,
     ),
   };
 };
