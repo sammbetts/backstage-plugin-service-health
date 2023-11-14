@@ -7,9 +7,6 @@
     "global.d.ts"
   ],
   "exclude": ["node_modules"],
-  "paths": {
-    "react": ["./node_modules/@types/react"]
-  },
   "compilerOptions": {
     "outDir": "dist-types",
     "rootDir": "."

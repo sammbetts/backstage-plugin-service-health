@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "https://github.com/sammbetts/backstage-plugin-service-health.git",
   "engines": {
     "node": "16 || 18"
@@ -14,6 +14,7 @@
     "build": "backstage-cli repo build",
     "build:all": "backstage-cli repo build --all",
     "tsc": "tsc",
+    "tsc:full": "backstage-cli clean && tsc --skipLibCheck false --incremental false",
     "lint:all": "backstage-cli repo lint",
     "test": "backstage-cli repo test",
     "clean": "backstage-cli repo clean",
