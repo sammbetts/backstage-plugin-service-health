@@ -4,7 +4,7 @@ Welcome to the service health plugin for [Backstage!](https://backstage.io/)
 
 This plugin displays the status and active incidents of third party services directly in Backstage.
 
-### Plugin Features:
+## Plugin Features
 
 - This plugin uses the third party services public status API.
 - Real time display of services current status.

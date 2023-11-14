@@ -4,7 +4,7 @@ Welcome to the service health plugin for [Backstage!](https://backstage.io/)
 
 This plugin displays the status and active incidents of third party services directly in Backstage.
 
-### Plugin Features:
+## Plugin Features
 
 - This plugin uses the third party services public status API.
 - Real time display of services current status.
@@ -27,7 +27,7 @@ Create a file called 'service-health.ts' in `packages/backend/src/plugins`
 
 ```ts
 import { Router } from 'express';
-import { createRouter } from '@internal/plugin-service-health-backend';
+import { createRouter } from '@sammbetts/plugin-service-health-backend';
 import { PluginEnvironment } from '../types';
 
 export default async function createPlugin(
