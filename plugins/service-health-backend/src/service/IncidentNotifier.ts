@@ -38,7 +38,7 @@ export class IncidentNotifier {
             incident.updated = convertToUKDateTimeFormat(
               incident.modified || incident.updated_at || incident.date_updated,
             );
-            incident.componentName = service.incidentComponents.join(', ');
+            incident.componentName = service.incidentComponents;
             incident.link =
               `${service.link}/incidents/${incident.uri}` ||
               incident.url ||
