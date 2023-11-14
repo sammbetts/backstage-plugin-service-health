@@ -3,7 +3,7 @@
 Add the package to your frontend application:
 
 ```bash
-npm install @sammbetts/backstage-plugin-service-health
+npm install @sammbetts/backstage-plugin-service-health-dashboard
 ```
 
 Modify your app routes in `packages/app/src/App.tsx`:
@@ -36,7 +36,7 @@ Add the **Service Health** icon to the Sidebar in `packages/app/src/components/R
 To use the Card component, add to your home/landing page:
 
 ```ts
-import { ServiceHealthOverviewCard } from '@sammbetts/backstage-plugin-service-health';
+import { ServiceHealthOverviewCard } from '@sammbetts/backstage-plugin-service-health-dashboard';
 
 ...
 <Grid item>
