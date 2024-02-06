@@ -24,6 +24,7 @@ import StatusPage from '../assets/statuspage.png';
 import OpsGenie from '../assets/opsgenie.png';
 import Vercel from '../assets/vercel.png';
 import Wiz from '../assets/wiz.png';
+import OnePassword from '../assets/1password.png';
 
 interface Props {
   title: string;
@@ -58,21 +59,22 @@ const useStyles = makeStyles({
 });
 
 const icons = {
-  CircleCI: CircleCI,
-  Cloudflare: CloudFlare,
-  Compass: Compass,
-  Confluence: Confluence,
+  'CircleCI': CircleCI,
+  'Cloudflare': CloudFlare,
+  'Compass': Compass,
+  'Confluence': Confluence,
   'Datadog US1': DataDog,
-  GitHub: GitHub,
+  'GitHub': GitHub,
   'Google Cloud Platform': GCP,
   'Google Workspace': GoogleWorkspace,
   'HashiCorp Services': HashiCorp,
   'Jira Software': Jira,
-  Opsgenie: OpsGenie,
-  Slack: Slack,
+  'Opsgenie': OpsGenie,
+  'Slack': Slack,
   'Atlassian Statuspage': StatusPage,
-  Vercel: Vercel,
-  Wiz: Wiz,
+  'Vercel': Vercel,
+  'Wiz': Wiz,
+  '1Password': OnePassword,
 };
 
 export const ServiceHealthDashboardPage = () => {

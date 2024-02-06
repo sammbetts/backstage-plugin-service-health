@@ -131,6 +131,9 @@ export async function refreshAllServices(_: DatabaseHandler): Promise<any> {
   const wizIncidents = fetchDataFromAPI(
     'https://status.wiz.io/api/v2/summary.json',
   );
+  const onePassIncidents = fetchDataFromAPI(
+    'https://status.1password.com/api/v2/summary.json',
+  );
 
   const responses = await Promise.allSettled([
     circleCIIncidents,
@@ -148,6 +151,7 @@ export async function refreshAllServices(_: DatabaseHandler): Promise<any> {
     statusPageIncidents,
     vercelPageIncidents,
     wizIncidents,
+    onePassIncidents,
   ]);
 
   const fulfilledResponses = responses.filter(

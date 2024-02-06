@@ -37,3 +37,4 @@ Dark mode:
 
 - [Frontend installation instructions](docs/frontend-installation.md)
 - [Backend installation instructions](docs/backend-installation.md)
+- [Contributing guide](docs/contributing.md)
